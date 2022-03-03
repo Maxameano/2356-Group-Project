@@ -1,45 +1,47 @@
 let blogNum = 0;
 
 function setup() {
-    $("#edit1").change(function() {
-        if(this.checked) {
-            $("#edit2").hide()
-            $("#edit3").hide()
-            blogNum = 1;
-            $("textArea").show()
-        }else{
-            $("#edit2").show()
-            $("#edit3").show()
-            blogNum = 0;
-            $("textArea").hide()
-        }
-    });
+  $("#textArea").hide()
 
-    $("#edit2").change(function() {
-        if(this.checked) {
-            $("#edit1").hide()
-            $("#edit3").hide()
-            blogNum = 2;
-            $("textArea").show()
-        }else{
-            $("#edit1").show()
-            $("#edit3").show()
-            blogNum = 0;
-            $("textArea").hide()
-        }
-    });
+  $("#edit1").change(function() {
+    if(this.checked) {
+      $("#edit2").hide()
+      $("#edit3").hide()
+      $("#textArea").show()
+      blogNum = 1;
+    }else{
+      $("#edit2").show()
+      $("#edit3").show()
+      $("#textArea").hide()
+      blogNum = 0;
+    }
+  });
 
-    $("#edit3").change(function() {
-        if(this.checked) {
-            $("#edit1").hide()
-            $("#edit2").hide()
-            blogNum = 3;
-            $("textArea").show()
-        }else{
-            $("#edit1").show()
-            $("#edit2").show()
-            blogNum = 0;
-            $("textArea").hide()
-        }
-    });
+  $("#edit2").change(function() {
+    if(this.checked) {
+      $("#edit1").hide()
+      $("#edit3").hide()
+      $("#textArea").show()
+      blogNum = 2;
+    }else{
+      $("#edit1").show()
+      $("#edit3").show()
+      $("#textArea").hide()
+      blogNum = 0;
+    }
+  });
+
+  $("#edit3").change(function() {
+    if(this.checked) {
+      $("#edit1").hide()
+      $("#edit2").hide()
+      $("#textArea").show()
+      blogNum = 3;
+    }else{
+      $("#edit1").show()
+      $("#edit2").show()
+      $("#textArea").hide()
+      blogNum = 0;
+    }
+  });
 }
