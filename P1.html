@@ -76,17 +76,97 @@
             
         
     
-    <!--Text entry area-->
-    <div id="textArea" class="container>
+    <!--Text entry area edited by KW Feb/03/22-->
+    <div id="textArea" class="container">
+
         <div class="row">
-            <button type="button" class="btn btn-danger w-auto" onclick="saveToStorage()">Save</button>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(1)">1</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(2)">2</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(3)">3</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(4)">4</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(5)">5</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(6)">6</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(7)">7</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(8)">8</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(9)">9</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(0)">0</a>
+            <a data-role="button" class="btn btn-dark mySemiLong" onclick="addChar('shift')">
+                <i class="bi-arrow-up"></i>
+            </a>
+          </div>
+
+          <div class="row">
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('q')">Q</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('w')">W</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('e')">E</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('r')">R</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('t')">T</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('y')">Y</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('u')">U</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('i')">I</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('o')">O</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('p')">P</a>
+            <a data-role="button" class="btn btn-dark mySemiLong" onclick="addChar('bksp')">
+                <i class="bi-arrow-left"></i>
+            </a>
+          </div>
+          
+          <div class="row">
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('a')">A</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('s')">S</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('d')">D</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('f')">F</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('g')">G</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('h')">H</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('j')">J</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('k')">K</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('l')">L</a>
+            <a data-role="button" class="btn btn-dark mySemiLong" onclick="enter()">Enter</a>
+            
+            <!--This has been cheesed see if can get fixed-->
+                <a data-role="button" class="btn btn-danger myWidStnd" onclick='addChar("&#8221")'>"</a>
+            
+          </div>
+          
+          <div class="row">
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('z')">Z</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('x')">X</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('c')">C</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('v')">V</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('b')">B</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('n')">N</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('m')">M</a>
+            <a data-role="button" class="btn btn-dark mySemiLong" onclick="addChar(' ')">Space</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('.')">.</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('?')">?</a>
+            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(',')">,</a>
+          </div>
+          <a data-role="button" class="btn btn-secondary myWidLong" onclick="wordBank('bankFill1')">
+            Word<i class="bi bi-piggy-bank"></i>
+        </a>
+        <input id="bankFill1" class="myWidFill">
+        <a data-role="button" class="btn btn-secondary myWidStnd" onclick="star('bankFill1')">
+            <i class="bi bi-star"></i>
+        </a>
+        <a data-role="button" class="btn btn-secondary myWidLong" onclick="wordBank('bankFill1')">
+            Word<i class="bi bi-piggy-bank myWidLong"></i>
+        </a>
+        <input id="bankFill2" class="myWidFill">
+        <a data-role="button" class="btn btn-secondary myWidStnd" onclick="star('bankFill2')">
+            <i class="bi bi-star"></i>
+        </a>
+          
+        <br>
+        <div class="row">
+            <button type= "button" class="btn btn-danger w-auto" onclick="saveToStorage()">Save</button>
             <button type="button" class="btn btn-warning w-auto" onclick="cancel()">Cancel</button>
         </div>
                                                                                    
-        <div class="row">
-            <input type="text" id="words" style="width:300px; height:300px;">
+        <div class="myRow">
+        <textarea id="words" rows="4" cols="50"></textarea>
         </div>
-        <div class="row">
+        
+        <div>
             <button type="button" class="btn btn-danger w-auto" onclick="saveToStorage()">Save</button>
             <button type="button" class="btn btn-warning w-auto" onclick="cancel()">Cancel</button>
         </div>
