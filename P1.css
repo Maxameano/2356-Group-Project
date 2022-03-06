@@ -1,41 +1,37 @@
-/*The margins not perfect working*/
-
 .myWidLong {
-  margin-bottom: 1px;
-  margin-right: 1px;
-  width: 94.5px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  width: 163px;
   text-align: center;
-  font-size: large;
-  height: 34px;
+  font-size: xx-large;
+  height: 64px;
 }
 
 .mySemiLong {
-  margin-bottom: 1px;
-  margin-right: 1px;
-  width: 70px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  width: 130px;
   text-align: center;
-  font-size: large;
-  height: 35px;
+  font-size: xx-large;
+  height: 64px;
 }
 
 .myWidStnd {
-  width: 35px;
-  height: 35px;
-  margin-bottom: 1px;
-  margin-right: 1px;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 2px;
+  margin-right: 2px;
   text-align: center;
-  font-size: large;
+  font-size: xx-large;
 }
-.myWidFill {
-  margin-bottom: 1px;
-  margin-right: 1px;
-  width: 94.5px;
-  text-align: center;
-  font-size: large;
-  height: 35px;
+
+.myTextbox {
+  width: 792px;
+  height: 396px;
+  font-size: x-large;
 }
 
 .myRow {
-  width: 500px;
+  width: 840px;
   margin-top: 5px;
 }
