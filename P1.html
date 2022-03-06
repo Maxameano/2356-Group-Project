@@ -1,174 +1,185 @@
 <!DOCTYPE html>
-<!-- saved from url=(0039)http://ugdev.cs.smu.ca/~d_macdonnell/P1 -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="P1.js"></script>
+<!--Peter Akerly, Sebastian Cox, Dylan MacDonell, Kevin Wiwczor-->
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css "> 
+  <link href="P1.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="P1.js"></script>
     
 </head>
 <body onload="setup()">
 
-        <!--Grid for switches & textboxes-->
-        <div class="container">
-            <div class="row" id="title">
-              <div class="col-sm">
-                Blog Name
-              </div>
-              <div class="col-sm">
-                Edit
-              </div>
-              <div class="col-sm">
-               Publish
-              </div>
-            </div>
-            <div class="row">
-                <div class="col-sm">
-                    <input type="text">
-                </div>
-                <div class="col-sm">
-                    <div class="form-check form-switch w-100">
-                        <input class="form-check-input w-100" type="checkbox" id="edit1" style="width:200;">
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="form-check form-switch w-100">
-                        <input class="form-check-input w-100" type="checkbox" id="flexSwitchCheckDefault">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm">
-                    <input type="text">
-                </div>
-                <div class="col-sm">
-                    <div class="form-check form-switch w-100">
-                        <input class="form-check-input w-100" type="checkbox" id="edit2">
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="form-check form-switch w-100">
-                        <input class="form-check-input w-100" type="checkbox" id="flexSwitchCheckDefault">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm">
-                    <input type="text">
-                </div>
-                <div class="col-sm">
-                    <div class="form-check form-switch w-100">
-                        <input class="form-check-input w-100" type="checkbox" id="edit3">
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="form-check form-switch w-100">
-                        <input class="form-check-input w-100" type="checkbox" id="flexSwitchCheckDefault">
-                    </div>
-                </div>
-            </div>
-          </div>
+  <!--Grid for switches & textboxes-->
+  <div class="container">
 
-    
-            
-        
-    
-    <!--Text entry area edited by KW Feb/03/22-->
-    <div id="textArea" class="container">
-
-        <div class="row">
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(1)">1</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(2)">2</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(3)">3</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(4)">4</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(5)">5</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(6)">6</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(7)">7</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(8)">8</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(9)">9</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(0)">0</a>
-            <a data-role="button" class="btn btn-dark mySemiLong" onclick="addChar('shift')">
-                <i class="bi-arrow-up"></i>
-            </a>
-          </div>
-
-          <div class="row">
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('q')">Q</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('w')">W</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('e')">E</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('r')">R</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('t')">T</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('y')">Y</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('u')">U</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('i')">I</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('o')">O</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('p')">P</a>
-            <a data-role="button" class="btn btn-dark mySemiLong" onclick="addChar('bksp')">
-                <i class="bi-arrow-left"></i>
-            </a>
-          </div>
-          
-          <div class="row">
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('a')">A</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('s')">S</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('d')">D</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('f')">F</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('g')">G</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('h')">H</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('j')">J</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('k')">K</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('l')">L</a>
-            <a data-role="button" class="btn btn-dark mySemiLong" onclick="enter()">Enter</a>
-            
-            <!--This has been cheesed see if can get fixed-->
-                <a data-role="button" class="btn btn-danger myWidStnd" onclick='addChar("&#8221")'>"</a>
-            
-          </div>
-          
-          <div class="row">
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('z')">Z</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('x')">X</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('c')">C</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('v')">V</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('b')">B</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('n')">N</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('m')">M</a>
-            <a data-role="button" class="btn btn-dark mySemiLong" onclick="addChar(' ')">Space</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('.')">.</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('?')">?</a>
-            <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(',')">,</a>
-          </div>
-          <a data-role="button" class="btn btn-secondary myWidLong" onclick="wordBank('bankFill1')">
-            Word<i class="bi bi-piggy-bank"></i>
-        </a>
-        <input id="bankFill1" class="myWidFill">
-        <a data-role="button" class="btn btn-secondary myWidStnd" onclick="star('bankFill1')">
-            <i class="bi bi-star"></i>
-        </a>
-        <a data-role="button" class="btn btn-secondary myWidLong" onclick="wordBank('bankFill1')">
-            Word<i class="bi bi-piggy-bank myWidLong"></i>
-        </a>
-        <input id="bankFill2" class="myWidFill">
-        <a data-role="button" class="btn btn-secondary myWidStnd" onclick="star('bankFill2')">
-            <i class="bi bi-star"></i>
-        </a>
-          
-        <br>
-        <div class="row">
-            <button type= "button" class="btn btn-danger w-auto" onclick="saveToStorage()">Save</button>
-            <button type="button" class="btn btn-warning w-auto" onclick="cancel()">Cancel</button>
-        </div>
-                                                                                   
-        <div class="myRow">
-        <textarea id="words" rows="4" cols="50"></textarea>
-        </div>
-        
-        <div>
-            <button type="button" class="btn btn-danger w-auto" onclick="saveToStorage()">Save</button>
-            <button type="button" class="btn btn-warning w-auto" onclick="cancel()">Cancel</button>
-        </div>
+    <!-- Title row-->
+    <div class="row myRow" id="title">
+      <div class="col-sm">
+        Blog Name
+      </div>
+      <div class="col-sm">
+        Edit
+      </div>
+      <div class="col-sm">
+       Publish
+      </div>
     </div>
-</body></html>
+
+    <!-- Row for Blog number 1 -->
+    <div class="row myRow mb-3">
+      <div class="col-sm">
+        <input type="text" id="text1">
+      </div>
+      <div class="col-sm">
+        <div class="form-check form-switch w-100 h-100">
+          <input class="form-check-input w-100 h-100" type="checkbox" id="edit1">
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="form-check form-switch w-100 h-100">
+          <input class="form-check-input w-100 h-100" type="checkbox" id="pub1">
+        </div>
+      </div>
+    </div>
+
+    <!-- Row for Blog number 2-->
+    <div class="row myRow mb-3">
+      <div class="col-sm">
+        <input type="text" id="text2">
+      </div>
+      <div class="col-sm">
+        <div class="form-check form-switch w-100 h-100">
+          <input class="form-check-input w-100 h-100" type="checkbox" id="edit2">
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="form-check form-switch w-100 h-100">
+          <input class="form-check-input w-100 h-100" type="checkbox" id="pub2">
+        </div>
+      </div>
+    </div>
+
+    <!-- Row for Blog number 3 -->
+    <div class="row myRow mb-3">
+      <div class="col-sm">
+        <input type="text"  id="text3">
+      </div>
+      <div class="col-sm">
+        <div class="form-check form-switch w-100 h-100">
+          <input class="form-check-input w-100  h-100" type="checkbox" id="edit3">
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="form-check form-switch w-100  h-100">
+          <input class="form-check-input w-100  h-100" type="checkbox">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+            
+        
+    
+  <!--Text entry area-->
+  <div id="textArea" class="container">
+    <div class="row">
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(1)">1</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(2)">2</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(3)">3</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(4)">4</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(5)">5</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(6)">6</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(7)">7</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(8)">8</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(9)">9</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(0)">0</a>
+      <a data-role="button" class="btn btn-dark mySemiLong" onclick="shift()">
+        <i class="bi-arrow-up"></i>
+      </a>
+    </div>
+
+    <div class="row">
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('q')">Q</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('w')">W</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('e')">E</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('r')">R</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('t')">T</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('y')">Y</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('u')">U</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('i')">I</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('o')">O</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('p')">P</a>
+      <a data-role="button" class="btn btn-dark mySemiLong" onclick="addChar('bksp')">
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+          
+    <div class="row">
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('a')">A</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('s')">S</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('d')">D</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('f')">F</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('g')">G</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('h')">H</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('j')">J</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('k')">K</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('l')">L</a>
+      <a data-role="button" class="btn btn-dark mySemiLong" onclick="enter()">Enter</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick='addChar("&#8221")'>"</a>
+    </div>
+          
+    <div class="row">
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('z')">Z</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('x')">X</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('c')">C</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('v')">V</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('b')">B</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('n')">N</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('m')">M</a>
+      <a data-role="button" class="btn btn-dark mySemiLong" onclick="addChar(' ')">Space</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('.')">.</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('?')">?</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(',')">,</a>
+    </div>
+
+    <div  class="row mb-5">
+      <a data-role="button" class="btn btn-secondary myWidLong" onclick="wordBank('bankFill1')">
+        Word<i class="bi bi-piggy-bank"></i>
+      </a>
+      <input id="bankFill1" class="myWidLong">   
+      <a data-role="button" class="btn btn-secondary myWidStnd" onclick="star('bankFill1')">
+        <i class="bi bi-star"></i>
+      </a>
+
+      <a data-role="button" class="btn btn-secondary myWidLong" onclick="wordBank('bankFill1')">
+        Word<i class="bi bi-piggy-bank myWidLong"></i>
+      </a>
+      <input id="bankFill2" class="myWidLong">
+      <a data-role="button" class="btn btn-secondary myWidStnd" onclick="star('bankFill2')">
+        <i class="bi bi-star"></i>
+      </a>
+    </div>
+          
+
+
+    <div class="row">
+      <button type="button" class="btn btn-danger mySemiLong" id="submit">Save</button>
+      <button type="button" class="btn btn-warning mySemiLong" id="cancel">Cancel</button>
+    </div>
+    <div class="row">
+      <textarea class="myTextbox" id="words"></textarea>
+    </div>
+    <div class="row">
+      <button type="button" class="btn btn-danger mySemiLong" id="submit">Save</button>
+      <button type="button" class="btn btn-warning mySemiLong" id="cancel">Cancel</button>
+    </div>
+  </div>
+</body>
+</html>
