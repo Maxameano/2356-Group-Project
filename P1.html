@@ -102,11 +102,12 @@
         
     
   <!--
-    created KW 03/05/2022
+    created KW 05/03/2022
+    edited PG 07/03/2022
     Interactive Keyboard
--->
+  -->
   <div id="textArea" class="container" hidden>
-    <div class="row">
+    <div class="row" id="kb1">
       <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(1)">1</a>
       <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(2)">2</a>
       <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(3)">3</a>
@@ -122,44 +123,44 @@
       </a>
     </div>
 
-    <div class="row">
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('q')">Q</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('w')">W</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('e')">E</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('r')">R</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('t')">T</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('y')">Y</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('u')">U</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('i')">I</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('o')">O</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('p')">P</a>
+    <div class="row" id="kbd2">
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('q')">q</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('w')">w</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('e')">e</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('r')">r</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('t')">t</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('y')">y</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('u')">u</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('i')">i</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('o')">o</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('p')">p</a>
       <a data-role="button" class="btn btn-dark mySemiLong" onclick="addChar('bksp')">
         <i class="bi bi-arrow-left"></i>
       </a>
     </div>
           
-    <div class="row">
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('a')">A</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('s')">S</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('d')">D</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('f')">F</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('g')">G</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('h')">H</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('j')">J</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('k')">K</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('l')">L</a>
+    <div class="row" id="kbd3">
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('a')">a</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('s')">s</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('d')">d</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('f')">f</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('g')">g</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('h')">h</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('j')">j</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('k')">j</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('l')">l</a>
       <a data-role="button" class="btn btn-dark mySemiLong" onclick="addChar('enter')">Enter</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick='addChar("\"")'>"</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick='addChar("&#8221")'>"</a>
     </div>
           
-    <div class="row">
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('z')">Z</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('x')">X</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('c')">C</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('v')">V</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('b')">B</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('n')">N</a>
-      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('m')">M</a>
+    <div class="row" id="kbd4">
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('z')">z</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('x')">x</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('c')">c</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('v')">v</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('b')">b</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('n')">n</a>
+      <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('m')">m</a>
       <a data-role="button" class="btn btn-dark mySemiLong" onclick="addChar(' ')">Space</a>
       <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('.')">.</a>
       <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar('?')">?</a>
@@ -168,7 +169,7 @@
 
     <!--
         Interactvie Keyboard special buttons
-        Created KW 03/07/2022
+        Created KW 07/03/2022
     -->
     <div  class="row mb-5">
       <a data-role="button" class="btn btn-secondary myWidLong" onclick="wordBank('bankFill1')">
