@@ -85,6 +85,7 @@ function setup() {
 }
 
 //Created KW 04/03/2022
+//Edited PG 07/03/2022
 // add into text field keyboard input
 function addChar(selection) {
   // Get the value from the id'ed field
@@ -94,19 +95,15 @@ function addChar(selection) {
     
     // Set the id'ed field to a shortened string
     $("#words").val(currChars.substring(0, currChars.length - 1));
+  } else if (selection === "enter") {
+
+    // Add line break when enter is pressed
+    $("#words").val(currChars+"\n");
   } else {
 
     // Set the id'ed field to the longer string
     $("#words").val(currChars.concat(selection));
   }
-}
-
-//Created KW 04/03/2022
-//function to add a linebreak when enter is pressed
-function enter() {
-  var content = $("#words").val();
-  console.log(content);
-  $("#words").val(content+"\n");
 }
 
 //Created PA 07/03/2022
@@ -130,7 +127,7 @@ function reset() {
   $('#edit3').prop('checked',false)
         
   //hide text box and keyboard
-  $('#textArea').hide()
+  $('#textArea').attr("hidden", true)
 
   //blanking the text area
   $('#words').val('')
