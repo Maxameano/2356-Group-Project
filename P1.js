@@ -120,7 +120,7 @@ function reset() {
   $('#edit3').prop('checked',false)
         
   //hide text box and keyboard
-  $('#textArea').hide()
+  $('#textArea').attr("hidden", true)
 
   //blanking the text area
   $('#words').val('')
