@@ -1,4 +1,5 @@
 let blogNum = 0;
+let shifter = 0;
 
 function setup() {
   
@@ -100,16 +101,62 @@ function addChar(selection) {
     // Add line break when enter is pressed
     $("#words").val(currChars+"\n");
   } else {
+    if (shifted == 0) {
 
-    // Set the id'ed field to the longer string
-    $("#words").val(currChars.concat(selection));
+      // Set the id'ed field to the longer string
+      $("#words").val(currChars.concat(selection));
+    } else {
+
+      // change selection to upper case and add the letter
+      selection = selection.toUpperCase();
+      $("#words").val(currChars.concat(selection));
+      kbdToLC();
+      shifted = 0;
+    }
+}
+
+//Created KW 02/03/2022
+//Edited PA 07/03/2022
+//stub function to later handle the shift key
+function shift() {
+  shifted = 1;
+  kbdToUC();
+}
+
+//Created PA 07/03/2022
+//updates characters on the keyboard appropriately
+function kbdToUC() {
+  console.log('SHIFT');
+  var currRow = document.getElementById("kbd2").getElementsByTagName("a");
+  for (let i = 0; i < 10; i++) {
+    currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
+  }
+  currRow = document.getElementById("kbd3").getElementsByTagName("a");
+  for (let i = 0; i < 9; i++) {
+    currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
+  }
+  currRow = document.getElementById("kbd4").getElementsByTagName("a");
+  for (let i = 0; i < 7; i++) {
+    currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
   }
 }
 
 //Created PA 07/03/2022
-//stub function to later handle the shift key
-function shift() {
-  console.log("shift");
+//updates characters on the keyboard appropriately
+function kbdToLC() {
+  console.log('UNSHIFT');
+  var currRow = document.getElementById("kbd2").getElementsByTagName("a");
+  for (let i = 0; i < 10; i++) {
+    currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
+  }
+  currRow = document.getElementById("kbd3").getElementsByTagName("a");
+  for (let i = 0; i < 9; i++) {
+    currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
+  }
+  currRow = document.getElementById("kbd4").getElementsByTagName("a");
+  for (let i = 0; i < 7; i++) {
+    currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
+  }
 }
 
 //Created SC 07/03/2022
