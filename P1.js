@@ -7,20 +7,17 @@ function setup() {
   $('#text2').val(localStorage.getItem('edit2'))
   $('#text3').val(localStorage.getItem('edit3'))
 
-  //hides the text area on load
-  $("#textArea").hide()
-    
   //listeners for the three edit toggles, which will hide each other and reveal the keyboard/textbox
   $("#edit1").change(function() {
     if(this.checked) {
       $("#edit2").hide()
       $("#edit3").hide()
-      $("#textArea").show()
+      $("#textArea").attr("hidden", false)
       blogNum = 1;
     }else{
       $("#edit2").show()
       $("#edit3").show()
-      $("#textArea").hide()
+      $("#textArea").attr("hidden", true)
       blogNum = 0;
     }
   });
@@ -29,12 +26,12 @@ function setup() {
     if(this.checked) {
       $("#edit1").hide()
       $("#edit3").hide()
-      $("#textArea").show()
+      $("#textArea").attr("hidden", false)
       blogNum = 2;
     }else{
       $("#edit1").show()
       $("#edit3").show()
-      $("#textArea").hide()
+      $("#textArea").attr("hidden", true)
       blogNum = 0;
     }
   });
@@ -43,12 +40,12 @@ function setup() {
     if(this.checked) {
       $("#edit1").hide()
       $("#edit2").hide()
-      $("#textArea").show()
+      $("#textArea").attr("hidden", false)
       blogNum = 3;
     }else{
       $("#edit1").show()
       $("#edit2").show()
-      $("#textArea").hide()
+      $("#textArea").attr("hidden", true)
       blogNum = 0;
     }
   });
