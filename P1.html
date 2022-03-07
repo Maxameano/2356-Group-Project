@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Peter Akerly, Sebastian Cox, Dylan MacDonell, Kevin Wiwczor-->
+<!--Peter Akerly (PA), Sebastian Cox (SC), Dylan MacDonell (DM), Kevin Wiwczor (KW)-->
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,10 +15,15 @@
 </head>
 <body onload="setup()">
 
-  <!--Grid for switches & textboxes-->
+  <!--
+      Created DM 01/03/2022
+      Grid for switches & textboxes
+    -->
   <div class="container">
 
-    <!-- Title row-->
+    <!-- Created DM 01/03/2022
+         Title row
+        -->
     <div class="row myRow" id="title">
       <div class="col-sm">
         Blog Name
@@ -31,7 +36,10 @@
       </div>
     </div>
 
-    <!-- Row for Blog number 1 -->
+    <!-- 
+         Created DM 01/03/2022
+         Row for Blog number 1
+     -->
     <div class="row myRow mb-3">
       <div class="col-sm">
         <input type="text" id="text1">
@@ -48,7 +56,10 @@
       </div>
     </div>
 
-    <!-- Row for Blog number 2-->
+    <!-- 
+         Created DM 01/03/2022
+         Row for Blog number 2
+    -->
     <div class="row myRow mb-3">
       <div class="col-sm">
         <input type="text" id="text2">
@@ -65,7 +76,10 @@
       </div>
     </div>
 
-    <!-- Row for Blog number 3 -->
+    <!-- 
+        Created DM 01/03/2022
+        Row for Blog number 3
+     -->
     <div class="row myRow mb-3">
       <div class="col-sm">
         <input type="text"  id="text3">
@@ -87,7 +101,10 @@
             
         
     
-  <!--Text entry area-->
+  <!--
+    created KW 03/05/2022
+    Interactive Keyboard
+-->
   <div id="textArea" class="container" hidden>
     <div class="row">
       <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(1)">1</a>
@@ -149,6 +166,10 @@
       <a data-role="button" class="btn btn-danger myWidStnd" onclick="addChar(',')">,</a>
     </div>
 
+    <!--
+        Interactvie Keyboard special buttons
+        Created KW 03/07/2022
+    -->
     <div  class="row mb-5">
       <a data-role="button" class="btn btn-secondary myWidLong" onclick="wordBank('bankFill1')">
         Word<i class="bi bi-piggy-bank"></i>
@@ -167,12 +188,18 @@
       </a>
     </div>
           
-
-
+  <!--
+    Created DM 01/03/2022
+  -->
     <div class="row">
       <button type="button" class="btn btn-danger mySemiLong" id="submit">Save</button>
       <button type="button" class="btn btn-warning mySemiLong" id="cancel">Cancel</button>
     </div>
+    
+    <!--
+        Created DM 01/03/2022  
+        Edited by KW 03/05/2022
+    -->
     <div class="row">
       <textarea class="myTextbox" id="words"></textarea>
     </div>
