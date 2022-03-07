@@ -89,18 +89,16 @@ function addChar(selection) {
     
     // Set the id'ed field to a shortened string
     $("#words").val(currChars.substring(0, currChars.length - 1));
+  } else if (selection === "enter") {
+
+    // Add line break when enter is pressed
+    $("#words").val(currChars+"\n");
   } else {
+    console.log("am doin stuff");
 
     // Set the id'ed field to the longer string
     $("#words").val(currChars.concat(selection));
   }
-}
-
-//function to add a linebreak when enter is pressed
-function enter() {
-  var content = $("#words").val();
-  console.log(content);
-  $("#words").val(content+"\n");
 }
 
 //stub function to later handle the shift key
