@@ -2,12 +2,13 @@ let blogNum = 0;
 
 function setup() {
   
+  //Created SC 02/03/2022
   //writing items from local storage to text boxes
   $('#text1').val(localStorage.getItem('edit1'))
   $('#text2').val(localStorage.getItem('edit2'))
   $('#text3').val(localStorage.getItem('edit3'))
 
-  //listeners for the three edit toggles, which will hide each other and reveal the keyboard/textbox
+  //Created PA 02/03/2022
   $("#edit1").change(function() {
     if(this.checked) {
       $("#edit2").hide()
@@ -22,6 +23,7 @@ function setup() {
     }
   });
 
+  //Created PA 02/03/2022
   $("#edit2").change(function() {
     if(this.checked) {
       $("#edit1").hide()
@@ -36,6 +38,7 @@ function setup() {
     }
   });
 
+  //Created PA 02/03/2022 
   $("#edit3").change(function() {
     if(this.checked) {
       $("#edit1").hide()
@@ -81,6 +84,8 @@ function setup() {
     $('#cancel').click(reset)
 }
 
+//Created KW 04/03/2022
+// add into text field keyboard input
 function addChar(selection) {
   // Get the value from the id'ed field
   var currChars = $("#words").val();
@@ -89,23 +94,28 @@ function addChar(selection) {
     
     // Set the id'ed field to a shortened string
     $("#words").val(currChars.substring(0, currChars.length - 1));
-  } else if (selection === "enter") {
-
-    // Add line break when enter is pressed
-    $("#words").val(currChars+"\n");
   } else {
-    console.log("am doin stuff");
 
     // Set the id'ed field to the longer string
     $("#words").val(currChars.concat(selection));
   }
 }
 
+//Created KW 04/03/2022
+//function to add a linebreak when enter is pressed
+function enter() {
+  var content = $("#words").val();
+  console.log(content);
+  $("#words").val(content+"\n");
+}
+
+//Created PA 07/03/2022
 //stub function to later handle the shift key
 function shift() {
   console.log("shift");
 }
 
+//Created SC 07/03/2022
 //function to hide text area and reset buttons
 function reset() {
     
@@ -120,7 +130,7 @@ function reset() {
   $('#edit3').prop('checked',false)
         
   //hide text box and keyboard
-  $('#textArea').attr("hidden", true)
+  $('#textArea').hide()
 
   //blanking the text area
   $('#words').val('')
