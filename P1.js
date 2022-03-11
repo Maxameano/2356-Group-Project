@@ -178,4 +178,4 @@ function reset() {
 
   //blanking the text area
   $('#words').val('')
-}
+}}
