@@ -1,5 +1,5 @@
 let blogNum = 0;
-let shifter = 0;
+let shifted = 0;
 
 function setup() {
   
