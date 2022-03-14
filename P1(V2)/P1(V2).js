@@ -22,10 +22,9 @@ function setup() {
   $('#text3').val(localStorage.getItem('edit3'))
 
   //Created PA 14/03/2022
-  //Creates a hover effect which changes the color of the key the mouse is hovering over
-  const keys = document.querySelectorAll('.btn-secondary');
-  keys.forEach(key => {
-    
+  //Creates a click/hover listener for all the keys
+  const kbd = document.querySelectorAll('.btn-secondary');
+  kbd.forEach(key => {
     //Changes key to red when mouse is over it
     key.addEventListener('mouseover', function() {
       key.setAttribute('style', 'background-color: red;');
@@ -34,6 +33,11 @@ function setup() {
     //Changes key back when mouse leaves it
     key.addEventListener('mouseout', function() {
       key.setAttribute('style', 'background-color: blue-grey;');
+    });
+
+    key.addEventListener('click', function() {
+      let input = this.innerHTML;
+      addChar(input);
     });
   });
 
@@ -120,105 +124,79 @@ function addChar(selection) {
   // Get the value from the id'ed field
   var currChars = $("#words").val();
 
-  if (selection === "bksp") {
-    
-    // Set the id'ed field to a shortened string
-    $("#words").val(currChars.substring(0, currChars.length - 1));
-  } else if (selection === "enter") {
-
-    // Add line break when enter is pressed
-    $("#words").val(currChars+"\n");
-  } else {
-    if (shifted == 0) {
-
-      // Set the id'ed field to the longer string
-      $("#words").val(currChars.concat(selection));
-    } else {
-
-      // change selection to upper case and add the letter
-      selection = selection.toUpperCase();
-      $("#words").val(currChars.concat(selection));
-      kbdToLC();
-      shifted = 0;
-    }
-  }
+  // Add letter
+  $("#words").val(currChars+selection);
+  kbdToLC();
+  shifted = 0;
 }
 
-//Created KW 02/03/2022
-//Edited PA 07/03/2022
-//stub function to later handle the shift key
-function shift() {
-  shifted = 1;
-  kbdToUC();
+//Created KW 04/03/2022
+//Set the id'ed field to a shortened string
+function bksp() {
+  // Get the value from the id'ed field
+  var currChars = $("#words").val();
+  $("#words").val(currChars.substring(0, currChars.length - 1));
+}
+
+//Created KW 04/03/2022
+//Add line break when enter is pressed
+function enter() {
+  // Get the value from the id'ed field
+  var currChars = $("#words").val();
+  $("#words").val(currChars+"\n");
 }
 
 //Created PA 07/03/2022
- //Edited KW 14/03/2022
- //updates characters on the keyboard appropriately
- function kbdToUC() {
-   console.log('SHIFT');
-   var currRow = document.getElementById("kbd1").getElementsByTagName("a");
-   console.log(currRow[0])
-   for (let i = 0; i < 9; i++) {
-     currRow[0].innerHTML = "!";
-     currRow[1].innerHTML = "@";
-     currRow[2].innerHTML = "#";
-     currRow[3].innerHTML = "$";
-     currRow[4].innerHTML = "%";
-     currRow[5].innerHTML = "^";
-     currRow[6].innerHTML = "&";
-     currRow[7].innerHTML = "*";
-     currRow[8].innerHTML = "(";
-     currRow[9].innerHTML = ")";
-     
-     
-   }
-   var currRow = document.getElementById("kbd2").getElementsByTagName("a");
-   for (let i = 0; i < 10; i++) {
-     currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
-   }
-   currRow = document.getElementById("kbd3").getElementsByTagName("a");
-   for (let i = 0; i < 9; i++) {
-     currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
-   }
-   currRow = document.getElementById("kbd4").getElementsByTagName("a");
-   for (let i = 0; i < 7; i++) {
-     currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
-   }
- }
- 
- //Created PA 07/03/2022
- //Edited KW 14/03/2022
- //updates characters on the keyboard appropriately
- function kbdToLC() {
-   console.log('UNSHIFT');
-   var currRow = document.getElementById("kbd1").getElementsByTagName("a");
-   console.log(currRow[0])
-   for (let i = 0; i < 9; i++) {
-     currRow[0].innerHTML = "1";
-     currRow[1].innerHTML = "2";
-     currRow[2].innerHTML = "3";
-     currRow[3].innerHTML = "4";
-     currRow[4].innerHTML = "5";
-     currRow[5].innerHTML = "6";
-     currRow[6].innerHTML = "7";
-     currRow[7].innerHTML = "8";
-     currRow[8].innerHTML = "9";
-     currRow[9].innerHTML = "0";
-   }
-   var currRow = document.getElementById("kbd2").getElementsByTagName("a");
-   for (let i = 0; i < 10; i++) {
-     currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
-   }
-   currRow = document.getElementById("kbd3").getElementsByTagName("a");
-   for (let i = 0; i < 9; i++) {
-     currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
-   }
-   currRow = document.getElementById("kbd4").getElementsByTagName("a");
-   for (let i = 0; i < 7; i++) {
-     currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
-   }
- }
+//Edited KW 14/03/2022
+//updates characters on the keyboard appropriately
+function kbdToUC() {
+  shifted = 1;
+  var currRow = document.getElementById("kbd1").getElementsByTagName("a");
+  currRow[0].innerHTML = "!";
+  currRow[1].innerHTML = "@";
+  currRow[2].innerHTML = "#";
+  currRow[3].innerHTML = "$";
+  currRow[4].innerHTML = "%";
+  currRow[5].innerHTML = "^";
+  currRow[6].innerHTML = "&";
+  currRow[7].innerHTML = "*";
+  currRow[8].innerHTML = "(";
+  currRow[9].innerHTML = ")";
+  var currRow = document.getElementById("kbd2").getElementsByTagName("a");
+  for (let i = 0; i < 10; i++) {
+    currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
+  }
+  currRow = document.getElementById("kbd3").getElementsByTagName("a");
+  for (let i = 0; i < 9; i++) {
+    currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
+  }
+  currRow = document.getElementById("kbd4").getElementsByTagName("a");
+  for (let i = 0; i < 7; i++) {
+    currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
+  }
+}
+
+//Created PA 07/03/2022
+//updates characters on the keyboard appropriately
+function kbdToLC() {
+  var currRow = document.getElementById("kbd1").getElementsByTagName("a");
+  for (let i = 0; i < 9; i++) {
+    currRow[i].innerHTML = i+1;
+  }
+  currRow[9].innerHTML = 0;
+  var currRow = document.getElementById("kbd2").getElementsByTagName("a");
+  for (let i = 0; i < 10; i++) {
+    currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
+  }
+  currRow = document.getElementById("kbd3").getElementsByTagName("a");
+  for (let i = 0; i < 9; i++) {
+    currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
+  }
+  currRow = document.getElementById("kbd4").getElementsByTagName("a");
+  for (let i = 0; i < 7; i++) {
+    currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
+  }
+}
 
 //Created SC 07/03/2022
 //function to hide text area and reset buttons
