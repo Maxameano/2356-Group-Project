@@ -84,3 +84,7 @@
   font-size: xx-large;
   width: 760px;
 }
+
+.carousel-item {
+  cursor: pointer;
+}
