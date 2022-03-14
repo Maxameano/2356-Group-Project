@@ -245,7 +245,7 @@ function reset() {
 //Function to add elements to carousel of favorite words
 function addFavorite() {
     //Gets last word written in textbox
-    let words = document.getElementById('words').value;
+    let words = document.getElementById('words').value.trim();
     var lastWord = words.split(' ')[words.split(' ').length - 1];
     console.log(lastWord);
 
