@@ -153,40 +153,72 @@ function shift() {
 }
 
 //Created PA 07/03/2022
-//updates characters on the keyboard appropriately
-function kbdToUC() {
-  console.log('SHIFT');
-  var currRow = document.getElementById("kbd2").getElementsByTagName("a");
-  for (let i = 0; i < 10; i++) {
-    currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
-  }
-  currRow = document.getElementById("kbd3").getElementsByTagName("a");
-  for (let i = 0; i < 9; i++) {
-    currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
-  }
-  currRow = document.getElementById("kbd4").getElementsByTagName("a");
-  for (let i = 0; i < 7; i++) {
-    currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
-  }
-}
-
-//Created PA 07/03/2022
-//updates characters on the keyboard appropriately
-function kbdToLC() {
-  console.log('UNSHIFT');
-  var currRow = document.getElementById("kbd2").getElementsByTagName("a");
-  for (let i = 0; i < 10; i++) {
-    currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
-  }
-  currRow = document.getElementById("kbd3").getElementsByTagName("a");
-  for (let i = 0; i < 9; i++) {
-    currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
-  }
-  currRow = document.getElementById("kbd4").getElementsByTagName("a");
-  for (let i = 0; i < 7; i++) {
-    currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
-  }
-}
+ //Edited KW 14/03/2022
+ //updates characters on the keyboard appropriately
+ function kbdToUC() {
+   console.log('SHIFT');
+   var currRow = document.getElementById("kbd1").getElementsByTagName("a");
+   console.log(currRow[0])
+   for (let i = 0; i < 9; i++) {
+     currRow[0].innerHTML = "!";
+     currRow[1].innerHTML = "@";
+     currRow[2].innerHTML = "#";
+     currRow[3].innerHTML = "$";
+     currRow[4].innerHTML = "%";
+     currRow[5].innerHTML = "^";
+     currRow[6].innerHTML = "&";
+     currRow[7].innerHTML = "*";
+     currRow[8].innerHTML = "(";
+     currRow[9].innerHTML = ")";
+     
+     
+   }
+   var currRow = document.getElementById("kbd2").getElementsByTagName("a");
+   for (let i = 0; i < 10; i++) {
+     currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
+   }
+   currRow = document.getElementById("kbd3").getElementsByTagName("a");
+   for (let i = 0; i < 9; i++) {
+     currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
+   }
+   currRow = document.getElementById("kbd4").getElementsByTagName("a");
+   for (let i = 0; i < 7; i++) {
+     currRow[i].innerHTML = currRow[i].innerHTML.toUpperCase();
+   }
+ }
+ 
+ //Created PA 07/03/2022
+ //Edited KW 14/03/2022
+ //updates characters on the keyboard appropriately
+ function kbdToLC() {
+   console.log('UNSHIFT');
+   var currRow = document.getElementById("kbd1").getElementsByTagName("a");
+   console.log(currRow[0])
+   for (let i = 0; i < 9; i++) {
+     currRow[0].innerHTML = "1";
+     currRow[1].innerHTML = "2";
+     currRow[2].innerHTML = "3";
+     currRow[3].innerHTML = "4";
+     currRow[4].innerHTML = "5";
+     currRow[5].innerHTML = "6";
+     currRow[6].innerHTML = "7";
+     currRow[7].innerHTML = "8";
+     currRow[8].innerHTML = "9";
+     currRow[9].innerHTML = "0";
+   }
+   var currRow = document.getElementById("kbd2").getElementsByTagName("a");
+   for (let i = 0; i < 10; i++) {
+     currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
+   }
+   currRow = document.getElementById("kbd3").getElementsByTagName("a");
+   for (let i = 0; i < 9; i++) {
+     currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
+   }
+   currRow = document.getElementById("kbd4").getElementsByTagName("a");
+   for (let i = 0; i < 7; i++) {
+     currRow[i].innerHTML = currRow[i].innerHTML.toLowerCase();
+   }
+ }
 
 //Created SC 07/03/2022
 //function to hide text area and reset buttons
