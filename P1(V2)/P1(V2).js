@@ -1,5 +1,5 @@
 /**
- * Authors:Peter Akerly (PA),
+ * Authors:Peter Akerley (PA),
  *         Sebastian Cox (SC),
  *         Dylan MacDonnell (DM),
  *         Kevin Wiwczor (KW)
@@ -20,6 +20,22 @@ function setup() {
   $('#text1').val(localStorage.getItem('edit1'))
   $('#text2').val(localStorage.getItem('edit2'))
   $('#text3').val(localStorage.getItem('edit3'))
+
+  //Created PA 14/03/2022
+  //Creates a hover effect which changes the color of the key the mouse is hovering over
+  const keys = document.querySelectorAll('.btn-secondary');
+  keys.forEach(key => {
+    
+    //Changes key to red when mouse is over it
+    key.addEventListener('mouseover', function() {
+      key.setAttribute('style', 'background-color: red;');
+    });
+
+    //Changes key back when mouse leaves it
+    key.addEventListener('mouseout', function() {
+      key.setAttribute('style', 'background-color: blue-grey;');
+    });
+  });
 
   //Created PA 02/03/2022
   $("#edit1").change(function() {
