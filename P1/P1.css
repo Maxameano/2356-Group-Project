@@ -1,0 +1,90 @@
+/*
+  Created by KW 05/03/2022
+  Edited PA 06/03/2022
+*/
+.myWidLong {
+  margin-bottom: 2px;
+  margin-right: 2px;
+  width: 163px;
+  text-align: center;
+  font-size: xx-large;
+  height: 64px;
+}
+
+/*
+  Created by KW 05/03/2022
+  Edited PA 06/03/2022
+  Edited DM 09/03/2022 
+  */
+.mySemiLong {
+  margin-bottom: 2px;
+  margin-right: 2px;
+  width: 130px;
+  text-align: center;
+  font-size: xx-large;
+  height: 64px;
+}
+
+.myFavourite {
+  margin-bottom: 2px;
+  margin-right: 2px;
+  width: 130px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: xx-large;
+  height: 64px;
+}
+
+.myLong {
+  margin-bottom: 2px;
+  margin-right: 2px;
+  width: 790px;
+  text-align: center;
+  font-size: xx-large;
+  height: 64px;
+}
+
+/*
+  Created by KW 05/03/2022
+  Edited PA 06/03/2022
+  */
+.myWidStnd {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  text-align: center;
+  font-size: xx-large;
+}
+
+/*
+  Created by KW 05/03/2022
+  Edited PA 06/03/2022
+  */
+.myTextbox {
+  width: 792px;
+  height: 396px;
+  font-size: x-large;
+}
+
+/*
+  Created by KW 05/03/2022
+  Edited PA 06/03/2022
+  */
+.myRow {
+  width: 840px;
+  margin-top: 5px;
+}
+
+/*
+  Created by DM 13/03/2022
+*/
+#demo {
+  text-align: center;
+  font-size: xx-large;
+  width: 760px;
+}
+
+.carousel-item {
+  cursor: pointer;
+}
