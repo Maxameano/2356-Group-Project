@@ -1,0 +1,26 @@
+const WORDBANK = [];
+
+
+function startup() {
+    var x;
+    var click = 0;
+    $('#wordBank').on("click", function() {
+        console.log("working");
+        if(click === 0) {
+            x = $('#textbox').val().split(' ');
+            console.log(x);
+            click++;
+        }
+        else{
+            let y = $('#textbox').val().split(' ');
+            console.log(y);
+            click--;
+            console.log(x);
+            for(let i = 0; i < x.length; i++) {
+                y.pop();
+            }
+            console.log(y);
+        }    
+        
+    })
+}
