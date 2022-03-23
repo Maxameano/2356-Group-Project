@@ -131,6 +131,26 @@
     Interactive Keyboard
   -->
   <div id="textArea" class="container" hidden>
+    <!--
+        Created DM 01/03/2022
+        First row of Save/Cancel buttons
+    -->
+    <div class="row">
+      <button type="button" class="btn btn-danger myStarBtn" id="submit">Save</button>
+      <button type="button" class="btn btn-warning myWideBtn" id="cancel">Cancel</button>
+    </div>
+    
+    <!--
+      Created DM 01/03/2022  
+      Edited by KW 03/05/2022
+      Textbox
+    -->
+    <div class="row">
+      <textarea class="myTextbox" id="words"></textarea>
+    </div>
+    
+    <br>
+
     <div class="row" id="kbd1">
       <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">1</span><span class="upperCase">@</span></a>
       <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">2</span><span class="upperCase">#</span></a>
@@ -194,27 +214,26 @@
     
     <div class="row" id="kbd5">
       <a data-role="button" class="btn btn-dark myBar" onclick="addChar(' ')">Space</a>
-      <a data-role="button" class="btn btn-primary myWideBtn" id="bankKey" onclick="bank()">
+      <a data-role="button" class="btn btn-primary myStarBtn" id="bankKey" onclick="bank()">
         <i class="bi-star"></i>
       </a>
     </div>
     
     <br>
 
-    <!-- 
+    <!-- Carousel Word Bank 
       Created DM 13/03/2022
       Carousel of favorite words 
-    -->
     <div id="demo" class="carousel slide" data-bs-interval="false">
   
-      <!-- The favorited words -->
+      The favorited words
       <div class="carousel-inner" id="elements" style="text-align:center">
         <div class="carousel-item active">
           FAVORITED WORDS    
         </div>
       </div>
   
-      <!-- Left and right controls/icons -->
+      Left and right controls/icons
       <button class="carousel-control-prev btn btn-danger" type="button" data-bs-target="#demo" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </button>
@@ -222,11 +241,10 @@
       <button class="carousel-control-next btn btn-danger" type="button" data-bs-target="#demo" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
       </button>
-    </div>    
+    </div>   
+    --> 
 
-    <br>
-
-    <!-- Old Word Bank
+    <!-- Original Word Bank
       Changed by: DM 09/03/2022
 
       Interactvie Keyboard special buttons
@@ -250,34 +268,6 @@
           </a>
       </div>
     -->
-   
-    <!--
-        Created DM 01/03/2022
-        First row of Save/Cancel buttons
-    -->
-    <div class="row">
-      <button type="button" class="btn btn-danger mySemiLong" id="submit">Save</button>
-      <button type="button" class="btn btn-warning mySemiLong" id="cancel">Cancel</button>
-    </div>
-    
-    <!--
-      Created DM 01/03/2022  
-      Edited by KW 03/05/2022
-      Textbox
-    -->
-    <div class="row">
-      <textarea class="myTextbox" id="words"></textarea>
-    </div>
-
-    <!--
-      Created DM 01/03/2022
-      Second row of Save/Cancel buttons
-    -->
-    <div class="row">
-      <button type="button" class="btn btn-danger mySemiLong" id="submit">Save</button>
-      <button type="button" class="btn btn-warning mySemiLong" id="cancel">Cancel</button>
-    </div>
-
   </div>
 </body>
 </html>
