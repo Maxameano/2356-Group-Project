@@ -25,20 +25,15 @@ function setup() {
 
   //Created PA 14/03/2022
   //Creates a click/hover listener for all the keys
-  const kbd = document.querySelectorAll('.btn-secondary');
+  const kbd = document.querySelectorAll('.myBtn');
   kbd.forEach(key => {
-    //Changes key to red when mouse is over it
-    key.addEventListener('mouseover', function() {
-      key.setAttribute('style', 'background-color: red;');
-    });
-
-    //Changes key back when mouse leaves it
-    key.addEventListener('mouseout', function() {
-      key.setAttribute('style', 'background-color: blue-grey;');
-    });
-
     key.addEventListener('click', function() {
-      let input = this.innerHTML;
+      let input;
+      if (shifted == 0){
+        input = this.children[0].innerHTML;
+      } else {
+        input = this.children[1].innerHTML;
+      }
       addChar(input);
     });
   });
@@ -128,6 +123,12 @@ function addChar(selection) {
 
   // Add letter
   $("#words").val(currChars+selection);
+
+  // Unshift if shifted use prebuilt shift function to do this.
+  if (shifted == 1) {
+    shifted = 2;
+    shift();
+  }
 }
 
 function shift() {
@@ -137,6 +138,7 @@ function shift() {
     $('#shiftKey').empty().append("CAPS");
   } else if (shifted == 1) {
     shifted = 2;
+    $('#shiftKey').empty().append("*CAPS*");
   } else if (shifted == 2) {
     shifted = 0;
     kbdToLC();
@@ -230,5 +232,3 @@ function addToText(){
     $("#words").val(currChars.concat(" ",x));
     
   }
-
-
