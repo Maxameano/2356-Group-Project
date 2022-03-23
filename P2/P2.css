@@ -82,6 +82,10 @@
   height: 50px;
 }
 
+.myBar:hover {
+  transform: scale(1.05, 1.1);
+}
+
 /*
   Created by KW 05/03/2022
   Edited PA 06/03/2022
