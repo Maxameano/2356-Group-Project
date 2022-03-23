@@ -128,6 +128,7 @@ function addChar(selection) {
 
   if (banking == 1) {
     newWord = newWord + selection;
+    console.log(newWord);
     $('#bankKey').empty().append('<i class="bi-star-half"></i>');
   }
 
@@ -185,7 +186,7 @@ function bank() {
     banking = 0;
     $('#bankKey').empty().append('<i class="bi-star-fill"></i>');
     if (newWord.length != 0) {
-      addToWordBank(newWord);
+      // call to function that adds the new word to the word bank
     }
   }
 }
