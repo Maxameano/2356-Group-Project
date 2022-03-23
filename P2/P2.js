@@ -9,8 +9,10 @@
  */
 
 var favoriteWords = [];
-let blogNum = 0;
-let shifted = 0;
+var blogNum = 0;
+var shifted = 0;
+var banking = 0;
+var newWord;
 
 
 function setup() {
@@ -124,6 +126,11 @@ function addChar(selection) {
   // Add letter
   $("#words").val(currChars+selection);
 
+  if (banking == 1) {
+    newWord = newWord + selection;
+    $('#bankKey').empty().append('<i class="bi-star-half"></i>');
+  }
+
   // Unshift if shifted use prebuilt shift function to do this.
   if (shifted == 1) {
     shifted = 2;
@@ -152,14 +159,35 @@ function bksp() {
   // Get the value from the id'ed field
   var currChars = $("#words").val();
   $("#words").val(currChars.substring(0, currChars.length - 1));
+  if (banking == 1) {
+    newWord = newWord.substring(0, newWord.length - 1);
+    if (newWord.length == 0) {
+      $('#bankKey').empty().append('<i class="bi-star"></i>');
+    }
+  }
 }
 
 //Created KW 04/03/2022
 //Add line break when enter is pressed
 function enter() {
   // Get the value from the id'ed field
-  var currChars = $("#words").val();
-  $("#words").val(currChars+"\n");
+  addChar("\n");
+}
+
+function bank() {
+  // stub that updates the bank key on click
+  // will interact with word bank later
+  if (banking == 0) {
+    banking = 1;
+    newWord = '';
+    $('#bankKey').empty().append('<i class="bi-star"></i>');
+  } else if (banking == 1) {
+    banking = 0;
+    $('#bankKey').empty().append('<i class="bi-star-fill"></i>');
+    if (newWord.length != 0) {
+      addToWordBank(newWord);
+    }
+  }
 }
 
 //Created PA 07/03/2022
@@ -230,5 +258,4 @@ function addToText(){
     var parentDOM = document.getElementById("elements") 
     var x = parentDOM.getElementsByClassName("active")[0].innerHTML;
     $("#words").val(currChars.concat(" ",x));
-    
-  }
+}
