@@ -187,6 +187,7 @@ function bank() {
     $('#bankKey').empty().append('<i class="bi-star-fill"></i>');
     if (newWord.length != 0) {
       // call to function that adds the new word to the word bank
+      console.log("Adding '" + newWord + "' to word bank.");
     }
   }
 }
