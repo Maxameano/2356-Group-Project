@@ -2,47 +2,84 @@
   Created by KW 05/03/2022
   Edited PA 06/03/2022
   */
-  .myBtn {
-    width: 50px;
-    height: 50px;
-    margin: 12px;
-    text-align: center;
-    font-size: 1.5em;
-    background-color: rgb(25, 33, 104);
-    transition: transform 0.1s;
-  }
+.myBtn {
+  width: 50px;
+  height: 50px;
+  margin: 12px;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: rgb(25, 33, 104);
+  border-color: black;
+  transition: transform 0.1s;
+}
 
 /*
   Created by PA 22/03/2022
   */
-  .myBtn:hover {
-    transform: scale(1.9);
-  }
+.myBtn:hover {
+  transform: scale(1.9);
+  background-color: rgb(25, 33, 104);
+  border-color: black;
+}
 
 /*
   Created by KW 05/03/2022
   Edited PA 06/03/2022
   Edited DM 09/03/2022 
   */
-  .myWideBtn {
-    width: 124px;
-    height: 50px;
-    margin: 12px;
-    text-align: center;
-    font-size: 1.5em;
-    background-color: rgb(175, 30, 45);
-  }
+.myWideBtn {
+  width: 124px;
+  height: 50px;
+  margin: 12px;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: rgb(175, 30, 45);
+  border-color: black;
+  transition: transform 0.1s;
+}
+
+/*
+  Created by PA 22/03/2022
+  */
+.myWideBtn:hover {
+  transform: scale(1.4);
+  background-color: rgb(155, 30, 45);
+  border-color: black;
+}
+
+/*
+  Created by PA 22/03/2022
+  */
+.myStarBtn {
+  width: 124px;
+  height: 50px;
+  margin: 12px;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: goldenrod;
+  border-color: black;
+  transition: transform 0.1s;
+}
+
+/*
+    Created by PA 22/03/2022
+    */
+.myStarBtn:hover {
+  transform: scale(1.4);
+  background-color: goldenrod;
+  border-color: black;
+}
 
 /*
   Created by \
   */
-  .myBar {
-    width: 716px;
-    margin: 12px;
-    text-align: center;
-    font-size: 1.5em;
-    height: 50px;
-  }
+.myBar {
+  width: 716px;
+  margin: 12px;
+  text-align: center;
+  font-size: 1.5em;
+  height: 50px;
+}
 
 /*
   Created by KW 05/03/2022
@@ -72,9 +109,9 @@
   Edited PA 06/03/2022
   */
 .myTextbox {
-  width: 792px;
-  height: 396px;
-  font-size: x-large;
+  width: 880px;
+  height: 320px;
+  font-size: 1.5em;
 }
 
 /*
@@ -88,7 +125,7 @@
 
 /*
   Created by DM 13/03/2022
-*/
+
 #demo {
   text-align: center;
   font-size: xx-large;
@@ -98,3 +135,4 @@
 .carousel-item {
   cursor: pointer;
 }
+*/
