@@ -1,7 +1,7 @@
 /*
   Created by KW 05/03/2022
   Edited PA 06/03/2022
-  */
+*/
 .myBtn {
   width: 50px;
   height: 50px;
@@ -15,7 +15,7 @@
 
 /*
   Created by PA 22/03/2022
-  */
+*/
 .myBtn:hover {
   transform: scale(1.9);
   background-color: rgb(25, 33, 104);
@@ -26,7 +26,7 @@
   Created by KW 05/03/2022
   Edited PA 06/03/2022
   Edited DM 09/03/2022 
-  */
+*/
 .myWideBtn {
   width: 124px;
   height: 50px;
@@ -40,7 +40,7 @@
 
 /*
   Created by PA 22/03/2022
-  */
+*/
 .myWideBtn:hover {
   transform: scale(1.4);
   background-color: rgb(155, 30, 45);
@@ -49,7 +49,7 @@
 
 /*
   Created by PA 22/03/2022
-  */
+*/
 .myStarBtn {
   width: 124px;
   height: 50px;
@@ -62,8 +62,8 @@
 }
 
 /*
-    Created by PA 22/03/2022
-    */
+  Created by PA 22/03/2022
+*/
 .myStarBtn:hover {
   transform: scale(1.4);
   background-color: goldenrod;
@@ -71,8 +71,9 @@
 }
 
 /*
-  Created by \
-  */
+  Created by DM 09/03/2022
+  Edited by PA 21/03/2022
+*/
 .myBar {
   width: 716px;
   margin: 12px;
@@ -107,7 +108,7 @@
 /*
   Created by KW 05/03/2022
   Edited PA 06/03/2022
-  */
+*/
 .myTextbox {
   width: 880px;
   height: 320px;
@@ -117,7 +118,7 @@
 /*
   Created by KW 05/03/2022
   Edited PA 06/03/2022
-  */
+*/
 .myRow {
   width: 840px;
   margin-top: 5px;
