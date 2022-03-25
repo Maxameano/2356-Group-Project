@@ -237,7 +237,6 @@
       <button class="carousel-control-prev btn btn-danger" type="button" data-bs-target="#demo" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </button>
-
       <button class="carousel-control-next btn btn-danger" type="button" data-bs-target="#demo" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
       </button>
@@ -246,10 +245,8 @@
 
     <!-- Original Word Bank
       Changed by: DM 09/03/2022
-
       Interactvie Keyboard special buttons
       Created KW 07/03/2022
-
       <div  class="row mb-5">
           <a data-role="button" class="btn btn-secondary myWidLong" onclick="wordBank('bankFill1')">
               Word<i class="bi bi-piggy-bank"></i>
@@ -258,7 +255,6 @@
           <a data-role="button" class="btn btn-secondary myWidStnd" onclick="star('bankFill1')">
             <i class="bi bi-star"></i>
           </a>
-
           <a data-role="button" class="btn btn-secondary myWidLong" onclick="wordBank('bankFill1')">
             Word<i class="bi bi-piggy-bank myWidLong"></i>
           </a>
@@ -269,5 +265,51 @@
       </div>
     -->
   </div>
+
+
+
+<!-- The Modal -->
+<div id="saveConfirm1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    
+    <p>Are you sure you would like to Save?</p>
+    <button class="modal-btn-yellow center" onclick="saveClick()">Save</button><button class="modal-btn-red center" onclick="closeModal()">Cancel</button>
+  </div>
+
+</div>
+
+<div id="saveConfirm2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <p>Are you absolutely certain you wish to save?</p>
+    <button class="modal-btn-yellow center" onclick="finalSave()">Save</button><button class="modal-btn-red center" onclick="closeModal()">Cancel</button>
+  </div>
+
+</div>
+
+<div id="cancelConfirm1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    
+    <p>Are you sure you would like to Cancel? Data may be lost.</p>
+    <button class="modal-btn-red center" onclick="cancelClick()">Cancel</button><button class="modal-btn-yellow center" onclick="closeModal()">Keep</button>
+  </div>
+
+</div>
+
+<div id="cancelConfirm2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <p>Are you absolutely sure you would like to Cancel? Data may be lost.</p>
+    <button class="modal-btn-red center" onclick="finalCancel()">Cancel</button><button class="modal-btn-yellow center" onclick="closeModal()">Keep</button>
+  </div>
+
+</div>
+
 </body>
 </html>
