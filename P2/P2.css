@@ -97,7 +97,6 @@
   font-size: xx-large;
   height: 64px;
 }
-
 .myFavourite {
   margin-bottom: 2px;
   margin-right: 2px;
@@ -130,14 +129,43 @@
 
 /*
   Created by DM 13/03/2022
-
 #demo {
   text-align: center;
   font-size: xx-large;
   width: 760px;
 }
-
 .carousel-item {
   cursor: pointer;
 }
 */
+.modal-content {
+  margin-top: 50px;
+  font-size: larger;
+  text-align: center;
+  background-color: rgba(0, 140, 255, 0.555);
+  border-color: black;
+}
+.modal-btn-yellow {
+  width: 400px;
+  height: 50px;
+  margin: 12px;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: goldenrod;
+  border-color: black;
+  transition: transform 0.5s;
+}
+.modal-btn-red {
+  width: 400px;
+  height: 50px;
+  margin: 12px;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: rgb(175, 30, 45);
+  border-color: black;
+  transition: transform 0.5s;
+}
+.center {
+  margin-left: 750px;
+}
+
