@@ -12,7 +12,6 @@
  var blogNum = 0;
  var shifted = 0;
  var banking = 0;
- var newWord;
  let waitCommand = 0;
  
  
@@ -103,16 +102,12 @@
  //Edited PG 07/03/2022
  // add into text field keyboard input
  function addChar(selection) {
-   // Get the value from the id'ed field
-   var currChars = $("#words").val();
- 
-   // Add letter
-   $("#words").val(currChars+selection);
- 
-   if (banking == 1) {
-     newWord = newWord + selection;
-     console.log(newWord);
-     $('#bankKey').empty().append('<i class="bi-star-half"></i>');
+   if (banking == 0) {
+    // Get the value from the id'ed field
+    $("#blogText").append(selection);
+   } else { // if banking ne word, update that field instead
+    $("#newWord").append(selection);
+    $('#bankKey').empty().append('<i class="bi-star-half"></i>');
    }
  
    // Unshift if shifted use prebuilt shift function to do this.
@@ -163,14 +158,16 @@
    // will interact with word bank later
    if (banking == 0) {
      banking = 1;
-     newWord = '';
      $('#bankKey').empty().append('<i class="bi-star"></i>');
    } else if (banking == 1) {
      banking = 0;
+     let newWord = $("#newWord").text();
      $('#bankKey').empty().append('<i class="bi-star-fill"></i>');
      if (newWord.length != 0) {
-       // call to function that adds the new word to the word bank
-       console.log("Adding '" + newWord + "' to word bank.");
+      $('#newWord').empty();
+      $('#blogText').append(newWord);
+      // call to function that adds the new word to the word bank
+      console.log("Adding '" + newWord + "' to word bank.");
      }
    }
  }
