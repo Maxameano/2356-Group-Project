@@ -115,7 +115,10 @@ const PORT = 4242
  
    //Listener for submit button
    $('#submit').click(()=>{
-         
+
+        processSaveModal();
+   
+    })    
      //check if storage is available
      if(typeof Storage !=='undefined'){
      
@@ -123,7 +126,7 @@ const PORT = 4242
        var input = $('#words').val();
  
        //emptying the text box
-       $('#words').val('')
+       //$('#words').val('')
          
        //Store stringified object to localStorage
        window.localStorage.setItem('edit'+blogNum,input)
@@ -132,16 +135,18 @@ const PORT = 4242
      }else{
        console.log('no local storage available')
      }
-     
+    
      //reseting buttons and text area
      reset()
  
      //Write input to edit box
      $('#text'+blogNum).val(input)
-    })
+    
      
     //Listener for cancel button
-    $('#cancel').click(reset)
+    $('#cancel').click(()=>{
+     processCancelModal();
+    }) 
 
     //Listener for the undo button
     $('#undo').click(undo)
@@ -290,6 +295,67 @@ const PORT = 4242
      var x = parentDOM.getElementsByClassName("active")[0].innerHTML;
      $("#words").val(currChars.concat(" ",x));
  }
+ function finalSave() {    
+  //check if storage is available
+  if(typeof Storage !=='undefined'){
+  
+    //get the word from user
+    var input = $('#words').val();
+
+    //emptying the text box
+    $('#words').val('')
+     console.log('edit'+blogNum,input); 
+    //Store stringified object to localStorage
+    window.localStorage.setItem('edit'+blogNum,input)
+
+  //else if there is no local storage
+  }else{
+    console.log('no local storage available')
+  }
+  
+  //reseting buttons and text area
+  reset()
+
+  //Write input to edit box
+  $('#text'+blogNum).val(input)
+  closeModal();
+ }
+ 
+
+function processSaveModal(){
+ console.log("I am a callback");
+$("#saveConfirm1").show();
+console.log("opening Modal");
+}
+
+function processCancelModal(){
+  console.log("I am a callback");
+ $("#cancelConfirm1").show();
+ console.log("opening Modal");
+ }
+
+function saveClick(){
+  $("#saveConfirm1").hide();
+  $("#saveConfirm2").show();
+}
+function cancelClick(){
+  $("#cancelConfirm1").hide();
+  $("#cancelConfirm2").show();
+}
+
+// When the user clicks on <span> (x), close the modal
+function closeModal() {
+  console.log("closing Modal")
+  $("#saveConfirm1").hide();
+  $("#saveConfirm2").hide();
+  $("#cancelConfirm1").hide();
+  $("#cancelConfirm2").hide();
+}
+function finalCancel(){
+  reset();
+  closeModal();
+}
+
 
  function undo() {
     //Stolen from DM on 21/03/22 by SC
