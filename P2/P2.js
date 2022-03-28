@@ -64,7 +64,7 @@ const PORT = 4242
    //editted SC 03/22/2022
    $("#edit1").change(function() {
     if(this.checked){
-        $("#table").hide()
+        $("#table").attr("hidden", true)
         $("#textArea").attr("hidden", false)
     }
 
@@ -254,7 +254,7 @@ const PORT = 4242
  function reset() {
      
    //show buttons
-   $("#table").show()
+   $("#table").attr("hidden", false)
          
    //uncheck buttons
    $('#edit1').prop('checked',false)
