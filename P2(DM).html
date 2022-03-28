@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--
+  Authors:
+    Peter Akerley (PA), 
+    Sebastian Cox (SC), 
+    Dylan MacDonell (DM), 
+    Kevin Wiwczor (KW)
+    Key:
+    - Creation/Edits: INITIALS DD/MM/YYY
+-->
+<html>
+
+<head>
+
+  <title>P2</title>
+    
+  <!-- Necessary meta tags-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <!-- CSS tags -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css "> 
+  <link href="P2.css" rel="stylesheet">
+
+  <!-- Javascript tags -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="P2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body onload="setup()">
+
+  <!--
+    Created DM 01/03/2022
+    Grid for switches & textboxes
+  -->
+  <div id="table" class="container">
+
+    <!--
+      Created DM 01/03/2022 
+      Title row
+    -->
+    <div class="row myRow" id="title">
+        <div class="col-sm">
+            Blog Number
+        </div>
+      <div class="col-sm">
+        Blog
+      </div>
+      <div class="col-sm">
+        Edit
+      </div>
+      <div class="col-sm">
+        Publish
+      </div>
+    </div>
+
+    <!-- 
+      Created DM 01/03/2022
+      Row for Blog number 1
+    -->
+    <div class="row myRow mb-3">
+        <div class="blogNames col-sm">
+            1
+        </div>
+      <div class="col-sm">
+        <input type="text" id="text1" placeholder="Enter Text">
+      </div>
+
+      <div class="col-sm">
+        <div class="form-check form-switch w-100 h-100">
+          <input class="form-check-input w-100 h-100" type="checkbox" id="edit1">
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="form-check form-switch w-100 h-100">
+          <input class="form-check-input w-100 h-100" type="checkbox" id="pub1">
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+      Created DM 01/03/2022
+      Row for Blog number 2
+    -->
+    <div class="row myRow mb-3">
+        <div class="blogNames col-sm">
+            2
+        </div>
+      <div class="col-sm">
+        <input type="text" id="text2" placeholder="Enter Text">
+      </div>
+
+      <div class="col-sm">
+        <div class="form-check form-switch w-100 h-100">
+          <input class="form-check-input w-100 h-100" type="checkbox" id="edit2">
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="form-check form-switch w-100 h-100">
+          <input class="form-check-input w-100 h-100" type="checkbox" id="pub2">
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+      Created DM 01/03/2022
+      Row for Blog number 3
+    -->
+    <div class="row myRow mb-3">
+        <div class="blogNames col-sm">
+            3
+        </div>
+      <div class="col-sm">
+        <input type="text"  id="text3" placeholder="Enter Text">
+      </div>
+
+      <div class="col-sm">
+        <div class="form-check form-switch w-100 h-100">
+          <input class="form-check-input w-100  h-100" type="checkbox" id="edit3">
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="form-check form-switch w-100  h-100">
+          <input class="form-check-input w-100  h-100" type="checkbox">
+        </div>
+      </div>
+    </div>
+  </div>        
+    
+  <br>
+
+<!--
+    Created DM 28/03/2022
+    Grid to put textbox/keyboard and wordbank side by side
+-->
+  <div id="textArea" class="container" Hidden>
+    <div class="row">
+      <div class="col-auto">
+        <div class="container">
+            <!--
+                Created DM 01/03/2022
+                First row of Save/Cancel buttons
+            -->
+            <div class="row">
+              <button type="button" class="btn btn-danger myStarBtn" id="submit">Save</button>
+              <button type="button" class="btn btn-warning myWideBtn" id="cancel">Cancel</button>
+            </div>
+            
+            <!--
+              Created DM 01/03/2022  
+              Edited by KW 03/05/2022
+              Textbox
+            -->
+            <div class="row">
+              <textarea class="myTextbox" id="words"></textarea>
+            </div>
+    
+            <br>
+        
+            <div class="row" id="kbd1">
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">1</span><span class="upperCase">@</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">2</span><span class="upperCase">#</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">3</span><span class="upperCase">$</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">4</span><span class="upperCase">%</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">5</span><span class="upperCase">&</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">6</span><span class="upperCase">/</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">7</span><span class="upperCase">*</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">8</span><span class="upperCase">+</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">9</span><span class="upperCase">-</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">0</span><span class="upperCase">=</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">(</span><span class="upperCase">&lt;</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">)</span><span class="upperCase">></span></a>
+            </div>
+        
+            <div class="row" id="kbd2">
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">q</span><span class="upperCase">Q</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">w</span><span class="upperCase">W</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">e</span><span class="upperCase">E</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">r</span><span class="upperCase">R</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">t</span><span class="upperCase">T</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">y</span><span class="upperCase">Y</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">u</span><span class="upperCase">U</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">i</span><span class="upperCase">I</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">o</span><span class="upperCase">O</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">p</span><span class="upperCase">P</span></a>
+              <a data-role="button" class="btn btn-primary myWideBtn" onclick="bksp()">
+                <i class="bi bi-arrow-left"></i>
+              </a>
+            </div>
+                  
+            <div class="row" id="kbd3">
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">a</span><span class="upperCase">A</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">s</span><span class="upperCase">S</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">d</span><span class="upperCase">D</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">f</span><span class="upperCase">F</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">g</span><span class="upperCase">G</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">h</span><span class="upperCase">H</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">j</span><span class="upperCase">J</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">k</span><span class="upperCase">K</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">l</span><span class="upperCase">L</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">'</span><span class="upperCase">"</span></a>
+              <a data-role="button" class="btn btn-primary myWideBtn" id="shiftKey" onclick="shift()">
+                <i class="bi-arrow-up"></i>
+              </a>
+            </div>
+                  
+            <div class="row" id="kbd4">
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">;</span><span class="upperCase">:</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">z</span><span class="upperCase">Z</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">x</span><span class="upperCase">X</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">c</span><span class="upperCase">C</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">v</span><span class="upperCase">V</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">b</span><span class="upperCase">B</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">n</span><span class="upperCase">N</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">m</span><span class="upperCase">M</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">,</span><span class="upperCase">?</span></a>
+              <a data-role="button" class="btn btn-primary myBtn"><span class="lowerCase">.</span><span class="upperCase">!</span></a>
+              <a data-role="button" class="btn btn-primary myWideBtn" onclick="enter()">Enter</a>
+            </div>
+            
+            <div class="row" id="kbd5">
+              <a data-role="button" class="btn btn-dark myBar" onclick="addChar(' ')">Space</a>
+              <a data-role="button" class="btn btn-primary myStarBtn" id="bankKey" onclick="bank()">
+                <i class="bi-star-fill"></i>
+              </a>
+            </div>
+            
+            <br>
+        
+            <!-- Carousel Word Bank 
+              Created DM 13/03/2022
+              Carousel of favorite words 
+            <div id="demo" class="carousel slide" data-bs-interval="false">
+          
+              The favorited words
+              <div class="carousel-inner" id="elements" style="text-align:center">
+                <div class="carousel-item active">
+                  FAVORITED WORDS    
+                </div>
+              </div>
+          
+              Left and right controls/icons
+              <button class="carousel-control-prev btn btn-danger" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next btn btn-danger" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>   
+            --> 
+        
+            <!-- Original Word Bank
+              Changed by: DM 09/03/2022
+              Interactvie Keyboard special buttons
+              Created KW 07/03/2022
+              <div  class="row mb-5">
+                  <a data-role="button" class="btn btn-secondary myWidLong" onclick="wordBank('bankFill1')">
+                      Word<i class="bi bi-piggy-bank"></i>
+                  </a>
+                  <input id="bankFill1" class="myWidLong">   
+                  <a data-role="button" class="btn btn-secondary myWidStnd" onclick="star('bankFill1')">
+                    <i class="bi bi-star"></i>
+                  </a>
+                  <a data-role="button" class="btn btn-secondary myWidLong" onclick="wordBank('bankFill1')">
+                    Word<i class="bi bi-piggy-bank myWidLong"></i>
+                  </a>
+                  <input id="bankFill2" class="myWidLong">
+                  <a data-role="button" class="btn btn-secondary myWidStnd" onclick="star('bankFill2')">
+                    <i class="bi bi-star"></i>
+                  </a>
+              </div>
+            -->
+ 
+          </div>
+
+      </div>
+      <div id="wordbank" class="col-sm">
+        <div class="border border-dark"> 
+            <div id="wbtitle">
+                wordbank
+            </div>
+            <div id="wordbankElements">
+                
+            </div>
+        </div>
+        <button type="button" id="delete" class="btn btn-danger" onclick="delFavWordCheck()">
+            <i class="bi bi-trash"></i>
+        </button>
+
+    
+    </div>
+    </div>
+  </div>
+
+   <!--
+    created KW 05/03/2022
+    edited PA 07/03/2022
+    edited PA 14/03/2022
+    Interactive Keyboard
+  -->
+  
+</body>
+</html>
