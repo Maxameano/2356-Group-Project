@@ -155,20 +155,17 @@ const PORT = 4242
     $('#undo').click(undo)
  }
  
- //Created KW 04/03/2022
+//Created KW 04/03/2022
  //Edited PG 07/03/2022
+ //Edited again PG 28/03/28
  // add into text field keyboard input
  function addChar(selection) {
-   // Get the value from the id'ed field
-   var currChars = $("#words").val();
- 
-   // Add letter
-   $("#words").val(currChars+selection);
- 
-   if (banking == 1) {
-     newWord = newWord + selection;
-     console.log(newWord);
-     $('#bankKey').empty().append('<i class="bi-star-half"></i>');
+   if (banking == 0) {
+    // Get the value from the id'ed field
+    $("#blogText").append(selection);
+   } else { // if banking ne word, update that field instead
+    $("#newWord").append(selection);
+    $('#bankKey').empty().append('<i class="bi-star-half"></i>');
    }
  
    // Unshift if shifted use prebuilt shift function to do this.
@@ -196,16 +193,20 @@ const PORT = 4242
  //Created KW 04/03/2022
  //Set the id'ed field to a shortened string
  function bksp() {
-   // Get the value from the id'ed field
-   var currChars = $("#words").val();
-   $("#words").val(currChars.substring(0, currChars.length - 1));
-   if (banking == 1) {
-     newWord = newWord.substring(0, newWord.length - 1);
-     if (newWord.length == 0) {
-       $('#bankKey').empty().append('<i class="bi-star"></i>');
-     }
-   }
- }
+  if (banking == 0) {
+    let blog = $('#blogText').text();
+    blog = blog.substring(0, blog.length - 1);
+  } else {
+    let newWord = $('#newWord').text();
+    if (newWord.length == 1) {
+      $('#newWord').empty();
+      $('#bankKey').empty().append('<i class="bi-star"></i>');
+    } else if (newWord.length > 1) {
+      newWord = newWord.substring(0, newWord.length - 1);
+      $('#newWord').empty().append(newWord);
+    }
+  }
+}  
  
  //Created KW 04/03/2022
  //Add line break when enter is pressed
