@@ -87,8 +87,7 @@ const PORT = 4242
    //Created PA 02/03/2022
    $("#edit2").change(function() {
      if(this.checked) {
-       $("#edit1").hide()
-       $("#edit3").hide()
+       $("#table").attr("hidden", true)
        $("#textArea").attr("hidden", false)
        blogNum = 2;
      }else{
@@ -102,8 +101,7 @@ const PORT = 4242
    //Created PA 02/03/2022 
    $("#edit3").change(function() {
      if(this.checked) {
-       $("#edit1").hide()
-       $("#edit2").hide()
+       $("#table").attr("hidden", true)
        $("#textArea").attr("hidden", false)
        blogNum = 3;
      }else{
