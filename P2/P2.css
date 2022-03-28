@@ -111,12 +111,26 @@
 /*
   Created by KW 05/03/2022
   Edited PA 06/03/2022
+  Edited further PA 28/03/2022
 */
-.myTextbox {
+#myTextbox {
+  display: block;
   width: 880px;
   height: 320px;
+  background-color: white;
+  border: 1px solid darkgrey;
   font-size: 1.5em;
+  overflow: scoll;
 }
+
+/*
+  Created PA 28/03/2022
+*/
+#newWord {
+  background-color: #fff47b;
+  text-decoration: underline;
+}
+
 
 /*
   Created by KW 05/03/2022
