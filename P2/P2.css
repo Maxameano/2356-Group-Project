@@ -138,6 +138,9 @@
   cursor: pointer;
 }
 */
+/*
+  Created by KW 25/03/2022
+*/
 .modal-content {
   margin-top: 50px;
   font-size: larger;
@@ -145,6 +148,9 @@
   background-color: rgba(0, 140, 255, 0.555);
   border-color: black;
 }
+/*
+  Created by KW 25/03/2022
+*/
 .modal-btn-yellow {
   width: 400px;
   height: 50px;
@@ -155,6 +161,9 @@
   border-color: black;
   transition: transform 0.5s;
 }
+/*
+  Created by KW 25/03/2022
+*/
 .modal-btn-red {
   width: 400px;
   height: 50px;
@@ -165,6 +174,9 @@
   border-color: black;
   transition: transform 0.5s;
 }
+/*
+  Created by KW 25/03/2022
+*/
 .center {
   margin-left: 750px;
 }
