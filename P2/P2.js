@@ -23,6 +23,7 @@ const PORT = 4242
  
  function setup() {
    //Created SC 21/03/2022
+   //Edited KW 25/03/2022
    //getting data from server
     $.get(SERVER_URL+PORT+'/onload',(dataReturned)=>{
         //placing blogs in text boxes
@@ -116,6 +117,7 @@ const PORT = 4242
    //Listener for submit button
    $('#submit').click(()=>{
 
+    //Catches submit button to deal with confirmation boxes
         processSaveModal();
    
     })    
@@ -145,6 +147,7 @@ const PORT = 4242
      
     //Listener for cancel button
     $('#cancel').click(()=>{
+        //Catches cancel button to deal with confirmation boxes
      processCancelModal();
     }) 
 
@@ -321,29 +324,37 @@ const PORT = 4242
   closeModal();
  }
  
-
+//Created KW 25/03/22
+//Brings up first save modal
 function processSaveModal(){
  console.log("I am a callback");
 $("#saveConfirm1").show();
 console.log("opening Modal");
 }
 
+//Created KW 25/03/22
+//Brings up first cancel modal
 function processCancelModal(){
   console.log("I am a callback");
  $("#cancelConfirm1").show();
  console.log("opening Modal");
  }
 
+ //Created KW 25/03/22
+ //Brings up second save modal
 function saveClick(){
   $("#saveConfirm1").hide();
   $("#saveConfirm2").show();
 }
+
+//Created KW 25/03/22
+//Brings up second cancel modal
 function cancelClick(){
   $("#cancelConfirm1").hide();
   $("#cancelConfirm2").show();
 }
 
-// When the user clicks on <span> (x), close the modal
+//Created KW 25/03/22 close the modals all of them
 function closeModal() {
   console.log("closing Modal")
   $("#saveConfirm1").hide();
@@ -351,13 +362,15 @@ function closeModal() {
   $("#cancelConfirm1").hide();
   $("#cancelConfirm2").hide();
 }
+
+//Created KW 25/03/22
+//User hits final cancel resets blog 
 function finalCancel(){
   reset();
   closeModal();
 }
 
-
- function undo() {
+function undo() {
     //Stolen from DM on 21/03/22 by SC
     let words = document.getElementById('words').value.trim();
     var lastWord = words.split(' ')[words.split(' ').length - 1];
