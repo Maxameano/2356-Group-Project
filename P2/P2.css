@@ -113,9 +113,12 @@
   Edited PA 06/03/2022
 */
 .myTextbox {
+  display: block;
   width: 880px;
   height: 320px;
   font-size: 1.5em;
+  border: 1px solid gray;
+  overflow: scroll;
 }
 
 /*
