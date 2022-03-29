@@ -112,7 +112,7 @@
   Created by KW 05/03/2022
   Edited PA 06/03/2022
 */
-.myTextbox {
+#myTextbox {
   display: block;
   width: 880px;
   height: 320px;
@@ -124,7 +124,7 @@
 /*
   Created by PA 28/03/2022
 */
-.newWord {
+#newWord {
   text-decoration: underline;
   background-color: #fffbce;
 }
@@ -191,4 +191,3 @@
 .center {
   margin-left: 750px;
 }
-
