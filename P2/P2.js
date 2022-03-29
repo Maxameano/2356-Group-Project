@@ -194,6 +194,7 @@ const PORT = 4242
   if (banking == 0) {
     let blog = $('#blogText').text();
     blog = blog.substring(0, blog.length - 1);
+    $('#blogText').empty().append(blog);
   } else {
     let newWord = $('#newWord').text();
     if (newWord.length == 1) {
@@ -218,12 +219,14 @@ const PORT = 4242
    // will interact with word bank later
    if (banking == 0) {
      banking = 1;
-     newWord = '';
      $('#bankKey').empty().append('<i class="bi-star"></i>');
    } else if (banking == 1) {
      banking = 0;
+     newWord = $('#newWord').text();
      $('#bankKey').empty().append('<i class="bi-star-fill"></i>');
      if (newWord.length != 0) {
+       $('#newWord').empty();
+       $('#blogText').append(newWord);
        // call to function that adds the new word to the word bank
        console.log("Adding '" + newWord + "' to word bank.");
      }
