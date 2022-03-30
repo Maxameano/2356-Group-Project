@@ -1,0 +1,243 @@
+/*
+  Created by KW 05/03/2022
+  Edited PA 06/03/2022
+*/
+.myBtn {
+  width: 36px;
+  height: 36px;
+  margin: 9px;
+  border-radius: 1px;
+  text-align: center;
+  font-size: 1em;
+  background-color: rgb(25, 33, 104);
+  border-color: black;
+  transition: transform 0.1s;
+}
+
+/*
+    Created by PA 22/03/2022
+  */
+.myBtn:hover {
+  transform: scale(2);
+  background-color: rgb(25, 33, 104);
+  border-color: black;
+}
+
+/*
+    Created by KW 05/03/2022
+    Edited PA 06/03/2022
+    Edited DM 09/03/2022 
+  */
+.myWideBtn {
+  width: 90px;
+  height: 36px;
+  margin: 9px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 1em;
+  background-color: rgb(175, 30, 45);
+  border-color: black;
+  transition: transform 0.1s;
+}
+
+/*
+    Created by PA 22/03/2022
+  */
+.myWideBtn:hover {
+  transform: scale(1.4);
+  background-color: rgb(155, 30, 45);
+  border-color: black;
+}
+
+/*
+    Created by SC 23/03/2022
+*/
+.myUndoBtn {
+  width: 90px;
+  height: 36px;
+  margin: 9px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 1em;
+  background-color: blue;
+  border-color: black;
+  transition: transform 0.1s;
+}
+.myUndoBtn:hover {
+  transform: scale(1.4);
+  background-color: blue;
+  border-color: black;
+}
+
+/*
+    Created by PA 22/03/2022
+  */
+.myStarBtn {
+  width: 90px;
+  height: 36px;
+  margin: 9px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 1em;
+  background-color: goldenrod;
+  border-color: black;
+  transition: transform 0.1s;
+}
+
+/*
+    Created by PA 22/03/2022
+  */
+.myStarBtn:hover {
+  transform: scale(1.4);
+  background-color: goldenrod;
+  border-color: black;
+}
+
+/*
+    Created by DM 09/03/2022
+    Edited by PA 21/03/2022
+  */
+.myBar {
+  width: 522px;
+  height: 36px;
+  margin: 9px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 1em;
+  border-color: black;
+  transition: transform 0.1s;
+}
+
+.myBar:hover {
+  transform: scale(1.07, 1.07);
+}
+
+/*
+    Created by KW 05/03/2022
+    Edited PA 06/03/2022
+  .myWidLong {
+    margin-bottom: 2px;
+    margin-right: 2px;
+    width: 163px;
+    text-align: center;
+    font-size: xx-large;
+    height: 64px;
+  }
+  .myFavourite {
+    margin-bottom: 2px;
+    margin-right: 2px;
+    width: 130px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    height: 64px;
+  }
+  */
+
+/*
+    Created by KW 05/03/2022
+    Edited PA 06/03/2022
+  */
+#myTextbox {
+  display: block;
+  width: 630px;
+  height: 320px;
+  font-size: 1em;
+  border: 1px solid gray;
+  overflow: auto;
+}
+
+/*
+    Created by PA 28/03/2022
+  */
+#newWord {
+  text-decoration: underline;
+  background-color: #fffbce;
+}
+
+/*
+    Created by KW 05/03/2022
+    Edited PA 06/03/2022
+  */
+.myRow {
+  width: 840px;
+  margin-top: 5px;
+}
+
+.myCol {
+  margin-left: -200px;
+}
+
+/*
+    Created by DM 13/03/2022
+  #demo {
+    text-align: center;
+    font-size: xx-large;
+    width: 760px;
+  }
+  .carousel-item {
+    cursor: pointer;
+  }
+  */
+/*
+    Created by KW 25/03/2022
+  */
+.modal-content {
+  margin-top: 50px;
+  font-size: larger;
+  text-align: center;
+  background-color: rgba(0, 140, 255, 0.555);
+  border-color: black;
+}
+/*
+    Created by KW 25/03/2022
+  */
+.modal-btn-yellow {
+  width: 400px;
+  height: 50px;
+  margin: 12px;
+  text-align: center;
+  font-size: 1em;
+  background-color: goldenrod;
+  border-color: black;
+  transition: transform 0.5s;
+}
+/*
+    Created by KW 25/03/2022
+  */
+.modal-btn-red {
+  width: 400px;
+  height: 50px;
+  margin: 12px;
+  text-align: center;
+  font-size: 1em;
+  background-color: rgb(175, 30, 45);
+  border-color: black;
+  transition: transform 0.5s;
+}
+/*
+    Created by KW 25/03/2022
+  */
+.center {
+  margin-left: 750px;
+}
+/*
+    Created by DM
+*/
+#wbtitle {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+#wordbank {
+  padding-top: 73px;
+}
+
+#wbarea {
+  background-color: rgb(25, 33, 104);
+}
+
+#delete {
+  width: 360px;
+}
