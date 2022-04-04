@@ -5,7 +5,7 @@
 .myBtn {
   width: 40px;
   height: 40px;
-  margin: 7px;
+  margin: 5px;
   border-radius: 1px;
   text-align: center;
   font-size: 1em;
@@ -31,7 +31,7 @@
 .myWideBtn {
   width: 90px;
   height: 40px;
-  margin: 7px;
+  margin: 5px;
   border-radius: 2px;
   text-align: center;
   font-size: 1em;
@@ -55,7 +55,7 @@
 .myUndoBtn {
   width: 94px;
   height: 40px;
-  margin: 7px;
+  margin: 5px;
   border-radius: 2px;
   text-align: center;
   font-size: 1em;
@@ -75,7 +75,7 @@
 .myStarBtn {
   width: 90px;
   height: 40px;
-  margin: 7px;
+  margin: 5px;
   border-radius: 2px;
   text-align: center;
   font-size: 1em;
@@ -98,9 +98,9 @@
     Edited by PA 21/03/2022
   */
 .myBar {
-  width: 526px;
+  width: 490px;
   height: 40px;
-  margin: 7px;
+  margin: 5px;
   border-radius: 2px;
   text-align: center;
   font-size: 1em;
@@ -141,7 +141,7 @@
 #myTextbox {
   display: block;
   width: 630px;
-  height: 320px;
+  height: 200px;
   font-size: 1em;
   border: 1px solid gray;
   overflow: auto;
@@ -164,8 +164,14 @@
   margin-top: 5px;
 }
 
-.myCol {
-  margin-left: -200px;
+.myColL {
+  position: fixed;
+  left: 0px;
+}
+
+.myColR {
+  position: fixed;
+  Right: 100px;
 }
 
 /*

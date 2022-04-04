@@ -201,10 +201,13 @@ const PORT = 4222
      $('#shiftKey').empty().append("CAPS");
    } else if (shifted == 1) {
      shifted = 2;
-     $('#shiftKey').empty().append("*CAPS*");
+     $('#shiftKey').css("background-color", "white");
+     $('#shiftKey').css("color", "black");
    } else if (shifted == 2) {
      shifted = 0;
      kbdToLC();
+     $('#shiftKey').css("background-color", "rgb(155, 30, 45)");
+     $('#shiftKey').css("color", "white");
      $('#shiftKey').empty().append('<i class="bi-arrow-up"></i>');
    }
  }
@@ -450,7 +453,7 @@ function wordBank(newWord) {
     
     favoriteWords.push(word);
     var x = document.getElementById('wordbankElements');
-    x.insertAdjacentHTML('beforeend','<button type="button" class="btn btn-light" onclick="delCheck('+"'" +word+ "'"+')">' +word+ '</button');
+    x.insertAdjacentHTML('beforeend','<button type="button" class="btn btn-light" onclick="delCheck(this)">' +word+ '</button');
     console.log(favoriteWords);
 
     let wordObj = {word:word}
@@ -461,7 +464,8 @@ function wordBank(newWord) {
 }
 
 
-function delCheck(word) {
+function delCheck(wordBtn) {
+  word = wordBtn.innerHTML;
     if(delwordbank === 0) {
         addToText(word);
     }
@@ -486,10 +490,10 @@ function delWord(word){
 
     }
     if(favoriteWords.length>0){
-        $('#wordbankElements').html('<button type="button" class="btn btn-light" onclick="delCheck('+"'" +favoriteWords[0]+ "'"+')">' +favoriteWords[0]+ '</button')
+        $('#wordbankElements').html('<button type="button" class="btn btn-light" onclick="delCheck(this)">' +favoriteWords[0]+ '</button')
         for(let i=1;i<favoriteWords.length;i++){
             console.log(i)
-            document.getElementById('wordbankElements').insertAdjacentHTML('beforeend','<button type="button" class="btn btn-light" onclick="delCheck('+"'" +favoriteWords[i]+ "'"+')">' +favoriteWords[i]+ '</button')
+            document.getElementById('wordbankElements').insertAdjacentHTML('beforeend','<button type="button" class="btn btn-light" onclick="delCheck(this)">' +favoriteWords[i]+ '</button')
         }
     }else{
         $('#wordbankElements').html('') 
