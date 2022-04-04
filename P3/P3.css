@@ -247,3 +247,26 @@
 #delete {
   width: 360px;
 }
+
+#wordbankElements {
+  padding-left: 80px;
+  padding-right: 80px;
+  width:360px;
+}
+
+.btn-light{
+  min-width: 200px;
+  width:200px;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+
+.btn-light:hover {
+  width:auto;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
