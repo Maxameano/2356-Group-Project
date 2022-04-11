@@ -225,7 +225,8 @@
     Created by KW 25/03/2022
   */
 .center {
-  margin-left: 750px;
+  align-self: center;
+  text-align: center;
 }
 /*
     Created by DM
